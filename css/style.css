@@ -1,0 +1,49 @@
+body{
+	padding-top:40px; 
+}
+.jumbotron{
+	background-image: url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTPui4ibGY3_ciUdZs95oamJJRfRix6nBilailvc7dchkTep1hm');
+}
+#jumbotrons{
+	color:white;
+}
+
+#logoNavBar{
+	float:left; margin-right:10px; height:56px;
+}
+
+.thumbnail:hover {
+    position:absolute; width:500px; height:auto; display:block; z-index:999;
+}
+#github, #facebook, #linkedin, #twitter{
+	font-size:30px;
+}
+
+#github:hover, #facebook:hover, #linkedin:hover, #twitter:hover{
+	color:white;
+}
+
+.slideDown{
+	margin-top:-55px; margin-left:-162px; position:absolute;
+}
+.slideDown2{
+	margin-top:-25px; margin-left:-66px; position:absolute;
+}
+.slideDown3{
+	margin-top:-55px; margin-left:10px; position:absolute;
+}
+.slideDown4{
+	margin-top:-25px; margin-left:90px; position:absolute;
+}
+.slideDown5{
+	margin-top:-55px; margin-left:150px; position:absolute;
+}
+#appGenieExcels, #appGenieTickets, #seniorProjects, #schoolWorks, #portfolios, #travelExpensess, #sushChocolates{
+	cursor: pointer;
+}
+#githubFooter, #facebookFooter, #linkedinFooter, #twitterFooter{
+	font-size:30px;
+}
+#githubFooter:hover, #facebookFooter:hover, #linkedinFooter:hover, #twitterFooter:hover {
+	color:black;
+}
