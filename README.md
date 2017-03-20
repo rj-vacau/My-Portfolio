@@ -1,2 +1,2 @@
 # My-Portfolio
-Creating my portfolio
+Creating my portfolio using JavaScript,jQuery,HTML,CSS, and Bootstrap.
