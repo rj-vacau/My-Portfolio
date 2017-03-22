@@ -9,8 +9,8 @@
 	getenv('REMOTE_ADDR');
 	
 	$details = file_get_contents('http://freegeoip.net/json/'.$_SERVER['REMOTE_ADDR']);
-	 
-	$to = "";
+	
+	$to = ""; //
 	$password = "";
     $message = 'From IP Address:' .$ip. 'Additionad Details:' .$details;
     $subject = "Email from my portfolio, someone visited your website!";

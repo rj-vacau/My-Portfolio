@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title> RJ Portfolio </title>
 		<link rel="shortcut icon" type="image/x-icon" href="images/tabIcon.png" />
 		
@@ -10,13 +11,15 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 		
 		<script src="https://code.jquery.com/jquery-3.2.0.min.js"/>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"/>
-		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"/>
-		<script type="text/javascript" src="https://use.fontawesome.com/6b413a9c1d.js"/>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.10.2/validator.min.js"/>
-		<script type="text/javascript" src="js/javaspt.js"/>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://use.fontawesome.com/6b413a9c1d.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.10.2/validator.min.js"></script>
+		<script type="text/javascript" src="js/javaspt.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
 	</head>
 	<body data-spy="scroll" data-target="#my-navbar">
 		<!-- Navigation bar -->
@@ -28,15 +31,9 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href=""><img src="images/logo.png" alt="logo" id="logoNavBar"></a>
+					<a href=""><img src="images/logo.png" alt="logo" id="logoNavBar" class="animated infinite pulse"></a>
 				</div>
 				<div class="collapse navbar-collapse" id="navbar-collapse">
-					<a href="https://www.facebook.com/" target="_blank" id="facebook" class="btn btn-social-icon btn-facebook navbar-right">
-						<span class="fa fa-facebook"></span>
-					</a>
-					<a href="https://www.twitter.com/" target="_blank" id="twitter" class="btn btn-social-icon btn-twitter navbar-right">
-						<span class="fa fa-twitter"></span>
-					</a>
 					<a href="https://github.com/rj-vacau" target="_blank" id="github" class="btn btn-social-icon btn-github navbar-right">
 						<span class="fa fa-github"></span>
 					</a>
@@ -54,8 +51,8 @@
 					
 					<!-- jumbotron-->
 					<div class="jumbotron" id="jumbotrons">
-						<div class="container text-center">
-							<h1>RJ Portfolio </h1>
+						<div class="container text-center ">
+							<div onmouseover="this.className='animated infinite swing'"; onmouseout="this.className=''"><h1> RJ Portfolio </h1></div>
 							<div id="tentaclesHeader2" class="fadeIn5">
 								<img src="images/drop.png" class="slideDown .img-responsive" alt="drop"/>
 								<img src="images/drop.png" class="slideDown2 .img-responsive" alt="drop"/>
@@ -70,7 +67,7 @@
 					<div class="container">
 						<section>
 							<div class="page-header text-center" id="About">
-								<h2>About</h2>
+								<h2><strong>About</strong></h2>
 								<div class="text-center">Coming soon</div>
 							</div>
 						</section>
@@ -80,42 +77,48 @@
 					<div class="container">
 						<section>
 							<div class="page-header" id="Work">
-								<h2>Work</h2>
+								<h2><strong>Work</strong></h2>
 							</div><!-- End Page Header -->
 							<div class="panel-group" id="accordion">
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h4 class="panel-title text-center">
-											<a data-toggle="collapse" data-parent="#accordion" href="#collapse1" data-toggle="modal">Previous Projects</a>
+											<a data-toggle="collapse" data-parent="#accordion" href="#collapse1" data-toggle="modal"><b>Previous Projects</b></a>
 										</h4>
 									</div>
-									<div id="collapse1" class="panel-collapse collapse in">
+									<div id="collapse1" class="panel-collapse collapse in animated bounce">
 										<div class="panel-body">
-											<div class="row">
-												<div class="col-lg-4" id="appGenieExcels" data-toggle="modal" data-target="#appGenieExcel">
-													<div class="panel panel-default text-center">
-														<div class="panel-body"> 
-															<span class="glyphicon glyphicon-briefcase"></span>
-															<h4>Appraiser Genie</h4>
-															<p>Web version of Excel Program</p>
+											<div class="row" >
+												<div class="col-lg-4"  id="appGenieExcels" data-toggle="modal" data-target="#appGenieExcel" >
+													<div class="panel panel-default text-center showClicked">
+														<div onmouseover="this.className='animated infinite swing'"; onmouseout="this.className=''";>
+															<div class="panel-body"> 
+																<span class="glyphicon glyphicon-briefcase" ></span>
+																<h4>Appraiser Genie</h4>
+																<p>Web version of Excel Program</p>
+															</div>
 														</div>
 													</div>
 												</div>
 												<div class="col-lg-4" id="appGenieTickets" data-toggle="modal" data-target="#appGenieTicket">
-													<div class="panel panel-default text-center">
-														<div class="panel-body">
-															<span class="glyphicon glyphicon-briefcase"></span>
-															<h4>Appraiser Genie</h4>
-															<p>Ticket System & Eomployee Cloack-in System</p>
+													<div class="panel panel-default text-center showClicked">
+														<div onmouseover="this.className='animated infinite swing'"; onmouseout="this.className=''";>
+															<div class="panel-body">
+																<span class="glyphicon glyphicon-briefcase"></span>
+																<h4>Appraiser Genie</h4>
+																<p>Ticket System & Eomployee Cloack-in System</p>
+															</div>
 														</div>
 													</div>
 												</div>
-												<div class="col-lg-4" id="seniorProjects" data-toggle="modal" data-target="#seniorProject">
-													<div class="panel panel-default text-center">
-														<div class="panel-body">
-															<span class="glyphicon glyphicon-education"></span>
-															<h4>Senior Project</h4>
-															<p>Wellness for Life Website Redesign</p>
+												<div class="col-lg-4 animated" id="seniorProjects" data-toggle="modal" data-target="#seniorProject">
+													<div class="panel panel-default text-center showClicked">
+														<div onmouseover="this.className='animated infinite swing'"; onmouseout="this.className=''";>
+															<div class="panel-body">
+																<span class="glyphicon glyphicon-education"></span>
+																<h4>Senior Project</h4>
+																<p>Wellness for Life Website Redesign</p>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -124,12 +127,14 @@
 											<div class="row">
 												<div class="col-lg-4">
 												</div>
-												<div class="col-lg-4" id="schoolWorks" data-toggle="modal" data-target="#schoolWork">
-													<div class="panel panel-default text-center">
-														<div class="panel-body">
-															<span class="glyphicon glyphicon-education"></span>
-															<h4>School Work</h4>
-															<p>GUI Class Project(Zilch Game)</p>
+												<div class="col-lg-4 animated" id="schoolWorks" data-toggle="modal" data-target="#schoolWork">
+													<div class="panel panel-default text-center showClicked">
+														<div onmouseover="this.className='animated infinite swing'"; onmouseout="this.className=''";>
+															<div class="panel-body">
+																<span class="glyphicon glyphicon-education"></span>
+																<h4>School Work</h4>
+																<p>GUI Class Project(Zilch Game)</p>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -137,23 +142,31 @@
 										</div>
 									</div>
 								</div>
+								
+								
+								
+								
+								
+								
+								
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h4 class="panel-title text-center">
-											<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Current Projects</a>
+											<a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><b>Current Projects</b></a>
 										</h4>
 									</div>
-									<div id="collapse2" class="panel-collapse collapse">
+									<div id="collapse2" class="panel-collapse collapse animated rotateIn">
 										<div class="panel-body">
-											<div class="row">
-												<div class="col-lg-4">
-												</div>
-												<div class="col-lg-4" id="portfolios" data-toggle="modal" data-target="#portfolio">
-													<div class="panel panel-default text-center">
-														<div class="panel-body">
-															<span class="glyphicon glyphicon-education"></span>
-															<h4>RJ Portfolio</h4>
-															<p>Portfolio</p>
+											<div class="row" >
+												<div class="col-lg-4" data-toggle="modal"></div>
+												<div class="col-lg-4"  id="portfolios" data-toggle="modal" data-target="#portfolio" >
+													<div class="panel panel-default text-center showClicked">
+														<div onmouseover="this.className='animated infinite swing'"; onmouseout="this.className=''";>
+															<div class="panel-body"> 
+																<span class="glyphicon glyphicon-education" ></span>
+																<h4>RJ Portfolio</h4>
+																<p>Portfolio</p>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -161,30 +174,35 @@
 										</div>
 									</div>
 								</div>
+								
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h4 class="panel-title text-center">
-											<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Upcoming Projects</a>
+											<a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><b>Upcoming Projects</b></a>
 										</h4>
 									</div>
-									<div id="collapse3" class="panel-collapse collapse">
+									<div id="collapse3" class="panel-collapse collapse animated rotateIn">
 										<div class="panel-body">
 											<div class="row">
 												<div class="col-lg-4" id="travelExpensess" data-toggle="modal" data-target="#travelExpenses">
-													<div class="panel panel-default text-center">
-														<div class="panel-body">
-															<span class="glyphicon glyphicon-education"></span>
-															<h4>Travel Expenses Tracker</h4>
-															<p>Tracking travel expenses while abroad</p>
+													<div class="panel panel-default text-center showClicked">
+														<div onmouseover="this.className='animated infinite swing'"; onmouseout="this.className=''";>
+															<div class="panel-body">
+																<span class="glyphicon glyphicon-education"></span>
+																<h4>Travel Expenses Tracker</h4>
+																<p>Tracking travel expenses while abroad</p>
+															</div>
 														</div>
 													</div>
 												</div>
 												<div class="col-lg-4" id="sushChocolates" data-toggle="modal" data-target="#sushChocolate">
-													<div class="panel panel-default text-center">
-														<div class="panel-body">
-															<span class="glyphicon glyphicon-education"></span>
-															<h4>Sush's Chocolate</h4>
-															<p>Delecious Chocolates</p>
+													<div class="panel panel-default text-center showClicked">
+														<div onmouseover="this.className='animated infinite swing'"; onmouseout="this.className=''";>
+															<div class="panel-body">
+																<span class="glyphicon glyphicon-education"></span>
+																<h4>Sush's Chocolate</h4>
+																<p>Delecious Chocolates</p>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -196,83 +214,30 @@
 						</section>
 					</div> <!-- End Container -->
 					
+					
 					<!-- Popup info for past,current,future projects -->
-					<div class= "modal fade" id="appGenieExcel" role="dialog">
-						<div class="modal-dialog">
+					<div class= "modal fade animated fadeInDown" id="appGenieExcel" role="dialog">
+						<div class="modal-dialog ">
 							<div class="modal-content">
-								<div class ="modal-header">
+								<div class ="modal-header ">
 									<button type="button" class="close" data-dismiss="modal">&times;</button>
 									<h4 class="modal-title text-center">Appraiser Genie</h4>
 								</div>
 								<div class="modal-body">
-									<div class="row">
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
+									<div class="imageContainer" width="100%">
+										<div id="imageCarousel">
+											<figure><img src="images/AGsignin.PNG" class=" img-responsive" alt="" width="100%"></figure>
+											<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="40%"></figure>
+											<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="40%"></figure>
 										</div>
 									</div>
-								</div>
-								<p>Converting Excel Version of Program to Web Version</p>
-								<div class="modal-footer">
-									<a href="" class="btn btn-info" data-dismiss="modal">Close</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class= "modal fade" id="appGenieTicket" role="dialog">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class ="modal-header">
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-									<h4 class="modal-title text-center">Appraiser Genie</h4>
-								</div>
-								<div class="modal-body">
-									<div class="row">
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-									</div>
+									<div></br></div>
+									<div></br></div>
+									<div></br></div>
+									<div class="text-center"><a class="btn btn-large btn-warning" target="_blank" href="http://www.appraisergenie.com">Appraiser Genie</a></div>
+									<div></br></div>
+									<div class="text-center" style="margin-left:10px; margin-right:10px;"><a href="http://www.appraisergenie.com"><strong>Appraiser Genie:</strong></a> Converted Excel Version of Program to Web Version 
+									using C#, ASP.NET and <a href="https://www.devexpress.com/" target="_blank">DevExpress.</a> Check out the <a href="https://www.youtube.com/watch?v=28b3W9QO5aA">Demo!</a></div>
 								</div>
 								<div class="modal-footer">
 									<a href="" class="btn btn-info" data-dismiss="modal">Close</a>
@@ -280,7 +245,35 @@
 							</div>
 						</div>
 					</div>
-					<div class= "modal fade" id="seniorProject" role="dialog">
+					<div class= "modal fade animated fadeInDown" id="appGenieTicket" role="dialog">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class ="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title text-center">Appraiser Genie</h4>
+								</div>
+								<div class="modal-body">
+									<div class="imageContainer" width="100%">
+										<div id="imageCarousel">
+											<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%"></figure>
+											<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%"></figure>
+											<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" height="10%"></figure>
+										</div>
+									</div>
+									<div></br></div>
+									<div></br></div>
+									<div></br></div>
+									<div class="text-center"><a class="btn btn-large btn-warning" target="_blank" href="http://www.appraisergenie.com">Appraiser Genie</a></div>
+									<div></br></div>
+									<div class="text-center" style="margin-left:10px; margin-right:10px;"><a href="http://www.appraisergenie.com"><strong>Appraiser Genie</strong></a> Ticket System: Created desktop application using Java</div>
+								</div>
+								<div class="modal-footer">
+									<a href="" class="btn btn-info" data-dismiss="modal">Close</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class= "modal fade animated fadeInDown" id="seniorProject" role="dialog">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class ="modal-header">
@@ -288,32 +281,22 @@
 									<h4 class="modal-title text-center">Senior Project</h4>
 								</div>
 								<div class="modal-body">
-									<div class="row">
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
+									<div class="imageContainer" width="100%">
+										<div id="imageCarousel">
+											<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%"></figure>
+											<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="40%"></figure>
+											<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="40%"></figure>
 										</div>
 									</div>
+									<div></br></div>
+									<div></br></div>
+									<div></br></div>
+									<div class="text-center"><a class="btn btn-large btn-warning" target="_blank" href="https://www.digwellnesscenter.com/">FDLIC</a></div>
+									<div></br></div>
+									<div class="text-center" style="margin-left:10px; margin-right:10px;"><a href="https://www.digwellnesscenter.com/"><strong>FDLIC:</strong></a>As a senior project class we had to 
+										re-design and add new features to the FDLIC's Dig Wellness Center website. Our group used CodeIgniter, MySQL, PHP, HTML, CSS, Javascript and jQuery to re-design their website. 
+										There was a little competition between two class groups and at the end of the semester we had to present our work to the company's CEO, CFO, project manager and senior 
+									web developer, and other staff. After the presentation, our group's work was voted the best from the other group, because of features and UI on our re-designed website.</div>
 								</div>
 								<div class="modal-footer">
 									<a href="" class="btn btn-info" data-dismiss="modal">Close</a>
@@ -321,7 +304,7 @@
 							</div>
 						</div>
 					</div>
-					<div class= "modal fade" id="schoolWork" role="dialog">
+					<div class= "modal fade animated fadeInDown" id="schoolWork" role="dialog">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class ="modal-header">
@@ -329,225 +312,174 @@
 									<h4 class="modal-title text-center">School Work</h4>
 								</div>
 								<div class="modal-body">
-									<div class="row">
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
+									<div class="imageContainer" width="100%">
+										<div id="imageCarousel">
+											<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%"></figure>
+											<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="40%"></figure>
+											<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="40%"></figure>
 										</div>
 									</div>
-								</div>
-								<div class="modal-footer">
-									<a href="" class="btn btn-info" data-dismiss="modal">Close</a>
-								</div>
+									<div></br></div>
+									<div></br></div>
+									<div></br></div>
+									<div class="text-center"><a class="btn btn-large btn-warning disabled">Graphical User Interface</a></div>
+									<div></br></div>
+								<div class="text-center" style="margin-left:10px; margin-right:10px;"><strong>Graphical User Interface: </strong></a>Info Coming Soon</div>
+							</div>
+							<div class="modal-footer">
+								<a href="" class="btn btn-info" data-dismiss="modal">Close</a>
 							</div>
 						</div>
 					</div>
-					<div class= "modal fade" id="portfolio" role="dialog">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class ="modal-header">
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-									<h4 class="modal-title text-center">Portfolio</h4>
-								</div>
-								<div class="modal-body">
-									<div class="row">
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
+				</div>
+				<div class= "modal fade animated fadeInDown" id="portfolio" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class ="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title text-center">Portfolio</h4>
+							</div>
+							<div class="modal-body">
+								<div class="imageContainer" width="100%">
+									<div id="imageCarousel">
+										<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%"></figure>
+										<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="40%"></figure>
+										<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="40%"></figure>
 									</div>
 								</div>
-								<div class="modal-footer">
-									<a href="" class="btn btn-info" data-dismiss="modal">Close</a>
-								</div>
-							</div>
+								<div></br></div>
+								<div></br></div>
+								<div></br></div>
+								<div class="text-center"><a class="btn btn-large btn-warning disabled">Portfolio</a></div>
+								<div></br></div>
+							<div class="text-center" style="margin-left:10px; margin-right:10px;"><strong>Portfolio: </strong></a>Info Coming Soon</div>
+						</div>
+						<div class="modal-footer">
+							<a href="" class="btn btn-info" data-dismiss="modal">Close</a>
 						</div>
 					</div>
-					<div class= "modal fade" id="travelExpenses" role="dialog">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class ="modal-header">
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-									<h4 class="modal-title text-center">Travel Expenses Tracker</h4>
-								</div>
-								<div class="modal-body">
-									<div class="row">
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="modal-footer">
-									<a href="" class="btn btn-info" data-dismiss="modal">Close</a>
+				</div>
+			</div>
+			<div class= "modal fade animated fadeInDown" id="travelExpenses" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class ="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title text-center">Travel Expenses Tracker</h4>
+						</div>
+						<div class="modal-body">
+							<div class="imageContainer" width="100%">
+								<div id="imageCarousel">
+									<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%"></figure>
+									<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="40%"></figure>
+									<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="40%"></figure>
 								</div>
 							</div>
-						</div>
+							<div></br></div>
+							<div></br></div>
+							<div></br></div>
+							<div class="text-center"><a class="btn btn-large btn-warning disabled">Travel Expenses Tracker</a></div>
+							<div></br></div>
+						<div class="text-center" style="margin-left:10px; margin-right:10px;"><strong>Travel Expenses Tracker: </strong></a>Info Coming Soon</div>
 					</div>
-					<div class= "modal fade" id="sushChocolate" role="dialog">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class ="modal-header">
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-									<h4 class="modal-title text-center">Sush's Chocolate</h4>
-								</div>
-								<div class="modal-body">
-									<div class="row">
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="panel panel-default text-center">
-												<div class="panel-body">
-													<span class="glyphicon glyphicon-star"></span>
-													<img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" alt="image" class="thumbnail img-responsive center-block"/> 
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="modal-footer">
-									<a href="" class="btn btn-info" data-dismiss="modal">Close</a>
-								</div>
+					<div class="modal-footer">
+						<a href="" class="btn btn-info" data-dismiss="modal">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class= "modal fade animated fadeInDown" id="sushChocolate" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class ="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title text-center">Sush's Chocolate</h4>
+					</div>
+					<div class="modal-body">
+						<div class="imageContainer" width="100%">
+							<div id="imageCarousel">
+								<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%"></figure>
+								<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="40%"></figure>
+								<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="40%"></figure>
+								<!--<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="50%"></figure>
+									<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="35%"></figure>
+									<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="50%"></figure>
+									<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="40%"></figure>
+									<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="50%"></figure>
+								<figure><img src="http://martinopropertygroup.com.au/wp-content/uploads/2016/08/Photo-Image-Coming-Soon-Icon.jpg" class=" img-responsive" alt="" width="100%" height="50%"></figure>-->
 							</div>
 						</div>
-					</div>
-					
-					<!-- Contact Us -->
-					<div class="container">
-						<section>
-							<div class="page-header" id="Contact">
-								<h2>Contact</h2>
-							</div> <!-- End Page Header -->
-							<div class="row">
-								<div class="col-lg-4">
-									<p><strong>To contact me please send me a message:</strong></p>
-								</div>
-								<div class="col-lg-8">
-									<form class="form-horizontal" action="" id="contactForm" data-toggle="validator" method="POST">
-										<div class="form-group">
-											<label for="user-name" class="col-lg-2 control-label">Name *</label>	
-											<div class="col-lg-10">
-												<input type="text" class="form-control" name="user-names" id="user-names" placeholder="Enter your name" required/>
-												<div class="help-block with-errors"></div>
-											</div>
-										</div><!-- End form group -->
-										<div class="form-group">
-											<label for="user-email" class="col-lg-2 control-label">Email *</label>
-											<div class="col-lg-10">
-												<input type="email" class="form-control" id="user-emails" placeholder="Enter your email" required/>
-												<div class="help-block with-errors"></div>
-											</div>
-										</div><!-- End form group -->
-										<div class="form-group">
-											<label for="user-message" class="col-lg-2 control-label">Message *</label>
-											<div class="col-lg-10">
-												<textarea name="user-message" name="user-messages" id="user-messages" cols="20" rows="10" class="form-control" placeholder="Enter your message" required></textarea>
-												<div class="help-block with-errors"></div>
-											</div>
-										</div><!-- End form group -->
-										<div class="form-group">
-											<div class="col-lg-10 col-lg-offset-2">
-												<button type="submit" name="submit" value="submit" id="submit" onclick="return submitForm()" class="btn btn-primary trigger">Submit</button>
-											</div>
-										</div>									
-									</form>
-								</div>
-							</div><!-- end row -->
-						</section>
-					</div>
-					
-					<!-- Footer -->
-					<footer>
-						<hr>
-						<div class="container text-center">
-							<a href="https://www.linkedin.com/in/rudrikj" id="linkedinFooter" target="_blank" class="btn btn-social-icon btn-linkedin">
-								<span class="fa fa-linkedin"></span>
-							</a>
-							<a href="https://github.com/rj-vacau" id="githubFooter" target="_blank" class="btn btn-social-icon btn-github">
-								<span class="fa fa-github"></span>
-							</a>
-							<a href="https://www.twitter.com/" id="twitterFooter" target="_blank" class="btn btn-social-icon btn-twitter">
-								<span class="fa fa-twitter"></span>
-							</a>
-							<a href="https://www.facebook.com/" id="facebookFooter" target="_blank" class="btn btn-social-icon btn-facebook">
-								<span class="fa fa-facebook"></span>
-							</a>
-							<p>&copy; Copyright @ 2017</p>
-						</div> <!-- end container -->
-					</footer>
-			</body>
-		</html>				
+						<div></br></div>
+						<div></br></div>
+						<div></br></div>
+						<div class="text-center"><a class="btn btn-large btn-warning disabled">Shush's Chocolate</a></div>
+						<div></br></div>
+					<div class="text-center" style="margin-left:10px; margin-right:10px;"><strong>Shush's Chocolate: </strong></a>Info Coming Soon</div>
+				</div>
+				<div class="modal-footer">
+					<a href="" class="btn btn-info" data-dismiss="modal">Close</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Contact Us -->
+	<div class="container">
+		<section>
+			<div class="page-header" id="Contact">
+				<h2><strong>Contact</strong></h2>
+			</div> <!-- End Page Header -->
+			<div class="row">
+				<div class="col-lg-4">
+					<p><strong>To contact me please fill out this form:</strong></p>
+				</div>
+				<div class="col-lg-8">
+					<form class="form-horizontal" action="" id="contactForm" data-toggle="validator" method="POST">
+						<div class="form-group">
+							<label for="user-name" class="col-lg-2 control-label">Name *</label>	
+							<div class="col-lg-10">
+								<input type="text" class="form-control" name="user-names" id="user-names" placeholder="Enter your name" required/>
+								<div class="help-block with-errors"></div>
+							</div>
+						</div><!-- End form group -->
+						<div class="form-group">
+							<label for="user-email" class="col-lg-2 control-label">Email *</label>
+							<div class="col-lg-10">
+								<input type="email" class="form-control" id="user-emails" placeholder="Enter your email" required/>
+								<div class="help-block with-errors"></div>
+							</div>
+						</div><!-- End form group -->
+						<div class="form-group">
+							<label for="user-message" class="col-lg-2 control-label">Message *</label>
+							<div class="col-lg-10">
+								<textarea name="user-message" name="user-messages" id="user-messages" cols="20" rows="10" class="form-control" placeholder="Enter your message" required></textarea>
+								<div class="help-block with-errors"></div>
+							</div>
+						</div><!-- End form group -->
+						<div class="form-group">
+							<div class="col-lg-10 col-lg-offset-2">
+								<button type="submit" name="submit" value="submit" id="submit" onclick="return submitForm()" class="btn btn-primary trigger">Submit</button>
+							</div>
+						</div>									
+					</form>
+				</div>
+			</div><!-- end row -->
+		</section>
+	</div>
+	
+	<!-- Footer -->
+	<footer>
+		<hr>
+		<div class="container text-center">
+			<a href="https://www.linkedin.com/in/rudrikj" id="linkedinFooter" target="_blank" class="btn btn-social-icon btn-linkedin">
+				<span class="fa fa-linkedin"></span>
+			</a>
+			<a href="https://github.com/rj-vacau" id="githubFooter" target="_blank" class="btn btn-social-icon btn-github">
+				<span class="fa fa-github"></span>
+			</a>
+		</a>
+		<p>&copy; Copyright @ 2017</p>
+	</div> <!-- end container -->
+</footer>
+</body>
+</html>
